@@ -1,0 +1,5 @@
+--- 
+server: 
+  servlet:
+    context-path: /SpringBootRestApi
+  port: 8080

@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.restexample.springboot</groupId>
+	<artifactId>SpringBootRestApiExample</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>SpringBootRestApiExample</name>
+	<description>SpringBootRestApiExample</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.3.RELEASE</version>
+	</parent>
+
+	<!-- Specify java version -->
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<!-- Add typical dependencies for a web application -->
+		<!-- Adds Tomcat and Spring MVC, along others, jackson-databind included 
+			transitively -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- Lombok is used to reduce boilerplate code for model/data objects, 
+			e.g., it can generate getters and setters for those object automatically 
+			by using Lombok annotations. The easiest way is to use the @Data annotation. -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<!-- <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency> -->
+		<!-- Swagger 2 is an open source project used to describe and document RESTful APIs -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- Package as an executable jar/war Include if you want to make an executable 
+				jar[FAT JAR which includes all dependencies along with sprinboot loader] 
+				that you can run on commandline using java -jar jarNAME -->
+			<!-- If you are not including it, result would be just a regular jar. 
+				You could run the project using mvn spring-boot:run [on project root directory] -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

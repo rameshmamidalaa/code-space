@@ -1,0 +1,4 @@
+--- 
+server: 
+  contextPath: /SpringBootStandAloneExample
+  port: 8080
